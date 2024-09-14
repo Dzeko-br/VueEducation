@@ -63,7 +63,7 @@
     import NavBar from "@/components/NavBar.vue";
     import Cart from '@/components/Cart.vue';
 
-    export default{
+    export default {
         components: {
             NavBar,
             Cart,
