@@ -47,9 +47,35 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <cart />
-                            <cart />
-                            <cart />
+                            <!-- begin item 1 -->
+                            <div class="best__item" :id="items[0].id">
+                                <img :src="require(`@/assets/img/${items[0].img}`)" :alt="items[0].name">
+                                <div class="best__item-title">
+                                    {{ items[0].name }}
+                                </div>
+                                <div class="best__item-price">{{ items[0].price }}$</div>
+                            </div>
+                            <!-- end item 1 -->
+
+                            <!-- begin item 2 -->
+                            <div class="best__item" :id="items[1].id">
+                                <img :src="require(`@/assets/img/${items[1].img}`)" :alt="items[1].name">
+                                <div class="best__item-title">
+                                    {{ items[1].name }}
+                                </div>
+                                <div class="best__item-price">{{ items[1].price }}$</div>
+                            </div>
+                            <!-- end item 2 -->
+
+                            <!-- begin item 3 -->
+                            <div class="best__item" :id="items[2].id">
+                                <img :src="require(`@/assets/img/${items[2].img}`)" :alt="items[2].name">
+                                <div class="best__item-title">
+                                    {{ items[2].name }}
+                                </div>
+                                <div class="best__item-price">{{ items[2].price }}$</div> 
+                            </div>
+                            <!-- end item 3 -->
                         </div>
                     </div>
                 </div>
@@ -62,11 +88,16 @@
 <script>
     import NavBar from "@/components/NavBar.vue";
     import Cart from '@/components/Cart.vue';
+    import itemsCart from '@/items.js';
 
     export default {
+        data() {
+            return { 
+                items: itemsCart,
+            }
+        },
         components: {
             NavBar,
-            Cart,
         }
     }
 </script>

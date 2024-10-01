@@ -7,3 +7,11 @@
         <div class="best__item-price">10.73$</div>
     </div>
 </template>
+
+<script></script>
+export default {
+    setup() {
+        
+    },
+}
+</script>
