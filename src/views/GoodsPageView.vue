@@ -36,13 +36,71 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
+                             <!-- begin item 1 -->
+                            <div class="shop__item">
+                                <img :src="require(`@/assets/img/${items[0].img}`)" :alt="items[0].img">
+                                <div class="shop__item-title">
+                                    {{ items[0].name }}
+                                </div>
+                                <div class="shop__item-country">{{ items[0].country }}</div>
+                                <div class="shop__item-price">{{ items[0].price }}$</div>
+                            </div>
+                            <!-- end item 1 -->
+
+                            <!-- begin item 2 -->
+                            <div class="shop__item">
+                                <img :src="require(`@/assets/img/${items[1].img}`)" :alt="items[1].img">
+                                <div class="shop__item-title">
+                                    {{ items[1].name }}
+                                </div>
+                                <div class="shop__item-country">{{ items[1].country }}</div>
+                                <div class="shop__item-price">{{ items[1].price }}$</div>
+                            </div>
+                            <!-- end item 2 -->
+
+                            <!-- begin item 3 -->
+                            <div class="shop__item">
+                                <img :src="require(`@/assets/img/${items[2].img}`)" :alt="items[2].img">
+                                <div class="shop__item-title">
+                                    {{ items[2].name }}
+                                </div>
+                                <div class="shop__item-country">{{ items[2].country }}</div>
+                                <div class="shop__item-price">{{ items[2].price }}$</div>
+                            </div>
+                            <!-- end item 3 -->
+
+                            <!-- begin item 4 -->
+                            <div class="shop__item">
+                                <img :src="require(`@/assets/img/${items[0].img}`)" :alt="items[0].img">
+                                <div class="shop__item-title">
+                                    {{ items[0].name }}
+                                </div>
+                                <div class="shop__item-country">{{ items[0].country }}</div>
+                                <div class="shop__item-price">{{ items[0].price }}$</div>
+                            </div>
+                            <!-- end item 4 -->
+
+                            <!-- begin item 5 -->
+                            <div class="shop__item">
+                                <img :src="require(`@/assets/img/${items[0].img}`)" :alt="items[0].img">
+                                <div class="shop__item-title">
+                                    {{ items[0].name }}
+                                </div>
+                                <div class="shop__item-country">{{ items[0].country }}</div>
+                                <div class="shop__item-price">{{ items[0].price }}$</div>
+                            </div>
+                            <!-- end item 5 -->
+
+                            <!-- begin item 6 -->
+                            <div class="shop__item">
+                                <img :src="require(`@/assets/img/${items[0].img}`)" :alt="items[0].img">
+                                <div class="shop__item-title">
+                                    {{ items[0].name }}
+                                </div>
+                                <div class="shop__item-country">{{ items[0].country }}</div>
+                                <div class="shop__item-price">{{ items[0].price }}$</div>
+                            </div>
+                            <!-- end item 6 -->
                         </div>
                     </div>
                 </div>
@@ -53,11 +111,15 @@
 
 <script>
     import NavBar from '@/components/NavBar.vue';
-    import Cart from '@/components/Cart.vue';
+    import itemsCart from "@/items";
     export default {
+        data() {
+            return {
+                items: itemsCart,
+            }
+        },
         components: {
             NavBar,
-            Cart,
         }
     }
 </script>
