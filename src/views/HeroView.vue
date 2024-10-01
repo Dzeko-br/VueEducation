@@ -47,9 +47,7 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <cart />
-                            <cart />
-                            <cart />
+                            
                         </div>
                     </div>
                 </div>
@@ -64,6 +62,31 @@
     import Cart from '@/components/Cart.vue';
 
     export default {
+       /*  data() {
+            items: [
+                {
+                    id: 1,
+                    name: 'Solimo Coffee Beans 2kg',
+                    country: 'Brazil',
+                    price: 10.73,
+                    img: 'coffee-1.jpg',
+                },
+                {
+                    id: 2,
+                    name: 'Presto Coffee Beans 1kg',
+                    country: 'Brazil',
+                    price: 15.99,
+                    img: 'coffee-2.jpg',
+                },
+                {
+                    id: 3,
+                    name: 'AROMISTICO Coffee 1kg',
+                    country: 'Brazil',
+                    price: 6.99,
+                    img: 'coffee-3.jpg',
+                },
+            ];
+        }, */
         components: {
             NavBar,
             Cart,
