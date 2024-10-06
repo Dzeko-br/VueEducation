@@ -1,9 +1,36 @@
 <template>
-    <div class="cart best__item">
-        <img src="@/assets/img/coffee-1.jpg" alt="coffee">
+    <div class="cart" :class="className">
+        <img :src="require(`@/assets/img/${img}`)" :alt="img">
         <div class="best__item-title">
-            Solimo Coffee Beans 2kg
+            {{ name }}
         </div>
-        <div class="best__item-price">10.73$</div>
+        <div class="best__item-price">{{ price }}$</div>
     </div>
 </template>
+
+<script>
+    export default {
+        props: {
+            name: {
+                type: String,
+                required: true,
+            },
+            price: {
+                type: Number,
+                required: true,
+            },
+            img: {
+                type: String,
+                required: true,
+            },
+            country: {
+                type: String,
+                required: false,
+            },
+            className: {
+                type: String,
+                required: false,
+            }
+        }
+    }
+</script>

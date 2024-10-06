@@ -7,7 +7,7 @@
                         <nav-bar />
                     </div>
                 </div>
-                <h1 class="title-big">For your pleasure</h1>
+                <Title title="For your pleasure" />
             </div>
         </div>
         <section class="shop">
@@ -30,19 +30,28 @@
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="line"></div>
-    
+
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="shop__wrapper">
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
-                            <cart />
+                            <cart :name="items[0].name" :img="items[0].img" :price="items[0].price"
+                                :country="items[0].country" className="shop__item" />
+
+                            <cart :name="items[1].name" :img="items[1].img" :price="items[1].price"
+                                :country="items[1].country" className="shop__item" />
+
+                            <cart :name="items[2].name" :img="items[2].img" :price="items[2].price"
+                                :country="items[2].country" className="shop__item" />
+
+                            <cart :name="items[3].name" :img="items[3].img" :price="items[3].price"
+                                :country="items[3].country" className="shop__item" />
+
+                            <cart :name="items[4].name" :img="items[4].img" :price="items[4].price"
+                                :country="items[4].country" className="shop__item" />
+                            <cart :name="items[5].name" :img="items[5].img" :price="items[5].price"
+                                :country="items[5].country" className="shop__item" />
                         </div>
                     </div>
                 </div>
@@ -53,9 +62,18 @@
 
 <script>
     import NavBar from '@/components/NavBar.vue';
-    import Cart from '@/components/Cart.vue';
+    import Cart from "@/components/Cart.vue";
+    import Title from "@/components/Title.vue";
+    import itemsCart from "@/items";
+
     export default {
+        data() {
+            return {
+                items: itemsCart,
+            }
+        },
         components: {
+            Title,
             NavBar,
             Cart,
         }

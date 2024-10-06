@@ -9,7 +9,7 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
-                        <h1 class="title-big">Everything You Love About Coffee</h1>
+                        <Title title="Everything You Love About Coffee" />
                         <img class="beanslogo" src="@/assets/logo/Beans_logo.svg" alt="Beans logo">
                         <div class="preview__subtitle">We makes every day full of energy and taste</div>
                         <div class="preview__subtitle">Want to try our beans?</div>
@@ -47,24 +47,35 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <cart />
-                            <cart />
-                            <cart />
+                            <cart className="best__item" :name="items[0].name" :price="items[0].price"
+                                :img="items[0].img" />
+                            <cart className="best__item" :name="items[1].name" :price="items[1].price"
+                                :img="items[1].img" />
+                            <cart className="best__item" :name="items[2].name" :price="items[2].price"
+                                :img="items[2].img" />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-  </main>
+    </main>
 </template>
-
 
 <script>
     import NavBar from "@/components/NavBar.vue";
     import Cart from '@/components/Cart.vue';
+    import Title from "@/components/Title.vue";
+    import itemsCart from "@/items";
+
 
     export default {
+        data() {
+            return {
+                items: itemsCart,
+            }
+        },
         components: {
+            Title,
             NavBar,
             Cart,
         }
