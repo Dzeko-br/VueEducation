@@ -47,23 +47,42 @@
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
                         <div class="best__wrapper">
-                            <cart />
-                            <cart />
-                            <cart />
+                            <cart 
+                                className="best__item"
+                                :name="items[0].name"
+                                :price="items[0].price" 
+                                :img="items[0].img"
+                            />
+                            <cart 
+                                className="best__item"
+                                :name="items[1].name"
+                                :price="items[1].price" 
+                                :img="items[1].img"
+                            />
+                            <cart 
+                                className="best__item"
+                                :name="items[2].name"
+                                :price="items[2].price" 
+                                :img="items[2].img"
+                            />
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-  </main>
+    </main>
 </template>
-
 
 <script>
     import NavBar from "@/components/NavBar.vue";
     import Cart from '@/components/Cart.vue';
 
     export default {
+        data() {
+            return {
+                items: itemsCart,
+            }
+        },
         components: {
             NavBar,
             Cart,
